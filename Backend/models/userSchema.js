@@ -76,7 +76,7 @@ userSchema.pre("save",async function(next){
 
 
 userSchema.methods.comparePassword = async function (enteredPassowrd){
-    return await bcrypt.compare(enteredPassowrd,this.password)
+    return await bcrypt.compare(enteredPassowrd,this.password);
 }
 
 userSchema.methods.generateJsonWebToken = function () {
